@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RecyclerListTreeView.iml" filepath="$PROJECT_DIR$/RecyclerListTreeView.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app4cotlin/app4cotlin.iml" filepath="$PROJECT_DIR$/app4cotlin/app4cotlin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recyclerlisttreeview/recyclerlisttreeview.iml" filepath="$PROJECT_DIR$/recyclerlisttreeview/recyclerlisttreeview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RecyclerListTreeView.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RecyclerListTreeView.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app4cotlin/RecyclerListTreeView.app4cotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/app4cotlin/RecyclerListTreeView.app4cotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recyclerlisttreeview/RecyclerListTreeView.recyclerlisttreeview.iml" filepath="$PROJECT_DIR$/.idea/modules/recyclerlisttreeview/RecyclerListTreeView.recyclerlisttreeview.iml" />
     </modules>
   </component>
 </project>
