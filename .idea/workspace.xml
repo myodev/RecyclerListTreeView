@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="36eda470-57e3-45d5-b131-a6e7bff2193e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/recyclerlisttreeview/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recyclerlisttreeview/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTreeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTreeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recyclerlisttreeview/src/main/res/layout/row_container_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recyclerlisttreeview/src/main/res/layout/row_container_layout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +21,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1oWhv8tnTegR5X9OQXdFsT9UPag" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager" selected="Android App.app4cotlin">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -142,6 +161,19 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36eda470-57e3-45d5-b131-a6e7bff2193e" name="Default Changelist" comment="" />
+      <created>1613408482700</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613408482700</updated>
+    </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4508" y="288" width="583" height="502" key="find.popup" timestamp="1613400948375">
+      <screen x="3840" y="0" width="1920" height="1080" />
+    </state>
+    <state x="4508" y="288" width="583" height="502" key="find.popup/1920.0.1920.1080/0.0.1920.1040/3840.0.1920.1080@3840.0.1920.1080" timestamp="1613400948375" />
   </component>
 </project>

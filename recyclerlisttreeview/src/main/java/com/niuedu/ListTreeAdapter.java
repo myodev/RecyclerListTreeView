@@ -1,8 +1,12 @@
 package com.niuedu;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,8 +59,8 @@ public abstract class ListTreeAdapter<VH extends ListTreeAdapter.ListTreeViewHol
         ImageView arrowIcon = container.findViewById(R.id.listtree_arrowIcon);
         //跟据列表控件的宽度为它计算一个合适的大小
         int w= parent.getMeasuredWidth();
-        arrowIcon.getLayoutParams().width=w/15;
-        arrowIcon.getLayoutParams().height=w/15;
+        arrowIcon.getLayoutParams().width=w/25;
+        arrowIcon.getLayoutParams().height=w/25;
 
         //子类创建自己的row view
         VH vh = onCreateNodeView(container,viewType);
@@ -102,7 +106,10 @@ public abstract class ListTreeAdapter<VH extends ListTreeAdapter.ListTreeViewHol
 
         //跟据node的层深，改变缩进距离,从0开始计
         int layer = tree.getNodeLayerLevel(node);
-        holder.headSpace.getLayoutParams().width=layer*20;
+        if(layer == 0) {
+            holder.headSpace.getLayoutParams().width = (int) dpToPx(holder.containerView.getContext(), 25);
+        }
+        holder.headSpace.getLayoutParams().width = (layer + 1) * (int) dpToPx(holder.containerView.getContext(), 25);
 
         //给子类机会去绑定行数据
         onBindNodeViewHolder(holder,position);
@@ -164,5 +171,14 @@ public abstract class ListTreeAdapter<VH extends ListTreeAdapter.ListTreeViewHol
                 }
             });
         }
+    }
+
+    public float dpToPx(Context context, float dip) {
+        Resources r = context.getResources();
+        return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dip,
+                r.getDisplayMetrics()
+        );
     }
 }
