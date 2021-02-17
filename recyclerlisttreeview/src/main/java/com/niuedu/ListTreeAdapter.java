@@ -59,8 +59,8 @@ public abstract class ListTreeAdapter<VH extends ListTreeAdapter.ListTreeViewHol
         ImageView arrowIcon = container.findViewById(R.id.listtree_arrowIcon);
         //跟据列表控件的宽度为它计算一个合适的大小
         int w= parent.getMeasuredWidth();
-        arrowIcon.getLayoutParams().width=w/25;
-        arrowIcon.getLayoutParams().height=w/25;
+        arrowIcon.getLayoutParams().width=w/15;
+        arrowIcon.getLayoutParams().height=w/15;
 
         //子类创建自己的row view
         VH vh = onCreateNodeView(container,viewType);

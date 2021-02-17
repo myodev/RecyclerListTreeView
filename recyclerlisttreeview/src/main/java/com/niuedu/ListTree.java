@@ -79,6 +79,10 @@ public class ListTree {
             return ret;
         }
 
+        public List<TreeNode> getDescendant() {
+            return collapseDescendant;
+        }
+
         public TreeNode getParent() {
             return parent;
         }
