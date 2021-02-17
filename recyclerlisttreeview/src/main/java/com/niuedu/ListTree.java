@@ -49,6 +49,8 @@ public class ListTree {
 
         private boolean checked;
 
+        private boolean indeterminate;
+
         //是否显示展开－收起图标
         private boolean showExpandIcon = true;
 
@@ -117,6 +119,12 @@ public class ListTree {
 
         public void setChecked(boolean checked) {
             this.checked = checked;
+            this.indeterminate = false;
+        }
+
+        public void setIndeterminate(boolean indeterminate) {
+            this.indeterminate = indeterminate;
+            this.checked = false;
         }
 
         void setDescendantChecked(boolean b) {

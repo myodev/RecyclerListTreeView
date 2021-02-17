@@ -8,17 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="36eda470-57e3-45d5-b131-a6e7bff2193e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/niuedu/com/treeviewtest/ExampleListTreeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/niuedu/com/treeviewtest/ExampleListTreeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app4cotlin/src/main/java/qst/com/app4cotlin/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app4cotlin/src/main/java/qst/com/app4cotlin/MainActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTreeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/recyclerlisttreeview/src/main/java/com/niuedu/ListTreeAdapter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[RF8M404N42H]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
