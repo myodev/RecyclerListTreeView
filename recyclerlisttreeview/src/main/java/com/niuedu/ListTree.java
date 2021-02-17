@@ -109,6 +109,10 @@ public class ListTree {
             return checked;
         }
 
+        public boolean isIndeterminate() {
+            return indeterminate;
+        }
+
         public boolean isShowExpandIcon() {
             return showExpandIcon;
         }
