@@ -89,7 +89,7 @@ public class ListTree {
             return parent;
         }
 
-        void setExpand(boolean expand) {
+        public void setExpand(boolean expand) {
             this.expand = expand;
         }
 
