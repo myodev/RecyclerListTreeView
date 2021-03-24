@@ -1,10 +1,6 @@
 package com.niuedu;
 
-import android.support.annotation.TransitionRes;
 import android.util.Pair;
-import android.util.Range;
-
-import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +44,8 @@ public class ListTree {
         private TreeNode parent = null;
 
         private boolean checked;
+
+        private boolean enabled = true;
 
         private boolean indeterminate;
 
@@ -109,6 +107,10 @@ public class ListTree {
             return checked;
         }
 
+        public boolean isEnabled() {
+            return enabled;
+        }
+
         public boolean isIndeterminate() {
             return indeterminate;
         }
@@ -124,6 +126,10 @@ public class ListTree {
         public void setChecked(boolean checked) {
             this.checked = checked;
             this.indeterminate = false;
+        }
+
+        public void setEnabled(boolean enabled) {
+            this.enabled = enabled;
         }
 
         public void setIndeterminate(boolean indeterminate) {
@@ -145,6 +151,20 @@ public class ListTree {
             }
         }
 
+        void setDescendantEnabled(boolean b) {
+            if (this.collapseDescendant == null) {
+                return;
+            }
+
+            if (this.expand) {
+                throw new IllegalStateException("Only can be invoked when node is collapsed");
+            }
+
+            for (TreeNode node : this.collapseDescendant) {
+                node.setEnabled(b);
+            }
+        }
+
         public int getChildrenCount() {
             return childrenCount;
         }
@@ -152,7 +172,6 @@ public class ListTree {
         public int getExpandDescendantCount() {
             return expandDescendantCount;
         }
-
 
         //仅在处于收起状态时才被调用
         void enumCheckedNodes(EnumOptionFunc optFunc) {
@@ -742,6 +761,21 @@ public class ListTree {
             return node.expandDescendantCount;
         } else {
             node.setDescendantChecked(b);
+            return 0;
+        }
+    }
+
+    public int setDescendantEnabled(int nodePlaneIndex, boolean b) {
+        TreeNode node = nodes.get(nodePlaneIndex);
+        if (node.isExpand()) {
+            int start = nodePlaneIndex + 1;
+            int count = node.expandDescendantCount;
+            for (int i = start; i < start + count; i++) {
+                nodes.get(i).setEnabled(b);
+            }
+            return node.expandDescendantCount;
+        } else {
+            node.setDescendantEnabled(b);
             return 0;
         }
     }
