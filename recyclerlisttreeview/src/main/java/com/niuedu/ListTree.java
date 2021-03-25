@@ -45,7 +45,7 @@ public class ListTree {
 
         private boolean checked;
 
-        private boolean enabled = true;
+        private boolean enabled;
 
         private boolean indeterminate;
 
