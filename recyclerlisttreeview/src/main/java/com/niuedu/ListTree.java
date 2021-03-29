@@ -49,6 +49,8 @@ public class ListTree {
 
         private boolean indeterminate;
 
+        private boolean overlayed;
+
         //是否显示展开－收起图标
         private boolean showExpandIcon = true;
 
@@ -115,6 +117,10 @@ public class ListTree {
             return indeterminate;
         }
 
+        public boolean isOverlayed() {
+            return overlayed;
+        }
+
         public boolean isShowExpandIcon() {
             return showExpandIcon;
         }
@@ -135,6 +141,10 @@ public class ListTree {
         public void setIndeterminate(boolean indeterminate) {
             this.indeterminate = indeterminate;
             this.checked = false;
+        }
+
+        public void setOverlayed(boolean overlayed) {
+            this.overlayed = overlayed;
         }
 
         void setDescendantChecked(boolean b) {
@@ -162,6 +172,20 @@ public class ListTree {
 
             for (TreeNode node : this.collapseDescendant) {
                 node.setEnabled(b);
+            }
+        }
+
+        void setDescendantOverlayed(boolean b) {
+            if(this.collapseDescendant == null) {
+                return;
+            }
+
+            if(this.expand) {
+                throw new IllegalStateException("Only can be invoked when node is collapsed");
+            }
+
+            for(TreeNode node : this.collapseDescendant) {
+                node.setOverlayed(b);
             }
         }
 
@@ -776,6 +800,21 @@ public class ListTree {
             return node.expandDescendantCount;
         } else {
             node.setDescendantEnabled(b);
+            return 0;
+        }
+    }
+
+    public int setDescendantOverlayed(int nodePlaneIndex, boolean b) {
+        TreeNode node = nodes.get(nodePlaneIndex);
+        if (node.isExpand()) {
+            int start = nodePlaneIndex + 1;
+            int count = node.expandDescendantCount;
+            for (int i = start; i < start + count; i++) {
+                nodes.get(i).setOverlayed(b);
+            }
+            return node.expandDescendantCount;
+        } else {
+            node.setDescendantOverlayed(b);
             return 0;
         }
     }
